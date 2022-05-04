@@ -18,6 +18,15 @@
 		2B536502281A6E1B00E5230D /* CameraRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B536501281A6E1B00E5230D /* CameraRootViewController.swift */; };
 		2B536504281A6E3C00E5230D /* MessageRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B536503281A6E3C00E5230D /* MessageRootViewController.swift */; };
 		2B536506281A6E6800E5230D /* ProfileRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B536505281A6E6800E5230D /* ProfileRootViewController.swift */; };
+		2B536508281A959600E5230D /* FeedContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B536507281A959600E5230D /* FeedContainerViewController.swift */; };
+		2B53650A281AA11700E5230D /* FeedContainerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B536509281AA11700E5230D /* FeedContainerCollectionViewCell.swift */; };
+		2B53650D281B9E0300E5230D /* UIViewController+Douyin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B53650C281B9E0300E5230D /* UIViewController+Douyin.swift */; };
+		2B53650F281BA48000E5230D /* UIColor+Douyin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B53650E281BA48000E5230D /* UIColor+Douyin.swift */; };
+		2B536514281BB3A800E5230D /* FeedTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B536513281BB3A800E5230D /* FeedTabView.swift */; };
+		2B536516281FB7EA00E5230D /* FeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B536515281FB7EA00E5230D /* FeedTableViewController.swift */; };
+		2B536518281FB82900E5230D /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B536517281FB82900E5230D /* FeedTableViewCell.swift */; };
+		2B53651A282105A000E5230D /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B536519282105A000E5230D /* FeedViewController.swift */; };
+		2B53651D28210D0700E5230D /* FeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B53651C28210D0700E5230D /* FeedModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +43,15 @@
 		2B536501281A6E1B00E5230D /* CameraRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraRootViewController.swift; sourceTree = "<group>"; };
 		2B536503281A6E3C00E5230D /* MessageRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageRootViewController.swift; sourceTree = "<group>"; };
 		2B536505281A6E6800E5230D /* ProfileRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRootViewController.swift; sourceTree = "<group>"; };
+		2B536507281A959600E5230D /* FeedContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedContainerViewController.swift; sourceTree = "<group>"; };
+		2B536509281AA11700E5230D /* FeedContainerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedContainerCollectionViewCell.swift; sourceTree = "<group>"; };
+		2B53650C281B9E0300E5230D /* UIViewController+Douyin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Douyin.swift"; sourceTree = "<group>"; };
+		2B53650E281BA48000E5230D /* UIColor+Douyin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Douyin.swift"; sourceTree = "<group>"; };
+		2B536513281BB3A800E5230D /* FeedTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTabView.swift; sourceTree = "<group>"; };
+		2B536515281FB7EA00E5230D /* FeedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewController.swift; sourceTree = "<group>"; };
+		2B536517281FB82900E5230D /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
+		2B536519282105A000E5230D /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		2B53651C28210D0700E5230D /* FeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedModel.swift; sourceTree = "<group>"; };
 		DB89F3C896F8AD376007ED12 /* Pods_DouyinDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DouyinDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD55C052A050D9C436F0FC43 /* Pods-DouyinDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DouyinDemo.debug.xcconfig"; path = "Target Support Files/Pods-DouyinDemo/Pods-DouyinDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,11 +89,13 @@
 		2B5364DA281A5E4D00E5230D /* DouyinDemo */ = {
 			isa = PBXGroup;
 			children = (
+				2B53651E2821276D00E5230D /* Resources */,
+				2B53650B281B9D2A00E5230D /* Utils */,
+				2B5364F2281A6CF200E5230D /* Camera */,
 				2B5364F4281A6D1000E5230D /* Profile */,
 				2B5364F3281A6D0600E5230D /* Message */,
-				2B5364F2281A6CF200E5230D /* Camera */,
 				2B5364F1281A6CE700E5230D /* Friend */,
-				2B5364F0281A6CDD00E5230D /* Home */,
+				2B5364F0281A6CDD00E5230D /* Feed */,
 				2B5364EF281A6CCF00E5230D /* Tab */,
 				2B5364DB281A5E4D00E5230D /* AppDelegate.swift */,
 				2B5364DD281A5E4D00E5230D /* SceneDelegate.swift */,
@@ -94,12 +114,14 @@
 			path = Tab;
 			sourceTree = "<group>";
 		};
-		2B5364F0281A6CDD00E5230D /* Home */ = {
+		2B5364F0281A6CDD00E5230D /* Feed */ = {
 			isa = PBXGroup;
 			children = (
+				2B53651B2821068300E5230D /* Models */,
+				2B536510281BB32200E5230D /* Views */,
 				2B5364F6281A6D3B00E5230D /* ViewControllers */,
 			);
-			path = Home;
+			path = Feed;
 			sourceTree = "<group>";
 		};
 		2B5364F1281A6CE700E5230D /* Friend */ = {
@@ -146,6 +168,9 @@
 			isa = PBXGroup;
 			children = (
 				2B5364FD281A6DDF00E5230D /* FeedRootViewController.swift */,
+				2B536507281A959600E5230D /* FeedContainerViewController.swift */,
+				2B536515281FB7EA00E5230D /* FeedTableViewController.swift */,
+				2B536519282105A000E5230D /* FeedViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -180,6 +205,56 @@
 				2B536505281A6E6800E5230D /* ProfileRootViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		2B53650B281B9D2A00E5230D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				2B53650C281B9E0300E5230D /* UIViewController+Douyin.swift */,
+				2B53650E281BA48000E5230D /* UIColor+Douyin.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		2B536510281BB32200E5230D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2B5365202822549800E5230D /* Buttons */,
+				2B536509281AA11700E5230D /* FeedContainerCollectionViewCell.swift */,
+				2B536513281BB3A800E5230D /* FeedTabView.swift */,
+				2B536517281FB82900E5230D /* FeedTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2B53651B2821068300E5230D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2B53651C28210D0700E5230D /* FeedModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2B53651E2821276D00E5230D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2B53651F2821279400E5230D /* lottie */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2B53651F2821279400E5230D /* lottie */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = lottie;
+			sourceTree = "<group>";
+		};
+		2B5365202822549800E5230D /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 		5D812014D04C19459CBB40AF /* Frameworks */ = {
@@ -315,12 +390,21 @@
 			files = (
 				2B536500281A6E0700E5230D /* FriendRootViewController.swift in Sources */,
 				2B536504281A6E3C00E5230D /* MessageRootViewController.swift in Sources */,
+				2B53651D28210D0700E5230D /* FeedModel.swift in Sources */,
 				2B5364DC281A5E4D00E5230D /* AppDelegate.swift in Sources */,
+				2B536516281FB7EA00E5230D /* FeedTableViewController.swift in Sources */,
+				2B536518281FB82900E5230D /* FeedTableViewCell.swift in Sources */,
 				2B5364FC281A6DBD00E5230D /* TabBarViewController.swift in Sources */,
+				2B53651A282105A000E5230D /* FeedViewController.swift in Sources */,
+				2B53650D281B9E0300E5230D /* UIViewController+Douyin.swift in Sources */,
+				2B536508281A959600E5230D /* FeedContainerViewController.swift in Sources */,
 				2B5364FE281A6DDF00E5230D /* FeedRootViewController.swift in Sources */,
 				2B5364DE281A5E4D00E5230D /* SceneDelegate.swift in Sources */,
 				2B536506281A6E6800E5230D /* ProfileRootViewController.swift in Sources */,
+				2B53650A281AA11700E5230D /* FeedContainerCollectionViewCell.swift in Sources */,
 				2B536502281A6E1B00E5230D /* CameraRootViewController.swift in Sources */,
+				2B53650F281BA48000E5230D /* UIColor+Douyin.swift in Sources */,
+				2B536514281BB3A800E5230D /* FeedTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
