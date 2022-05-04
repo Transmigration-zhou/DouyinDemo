@@ -27,6 +27,12 @@
 		2B536518281FB82900E5230D /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B536517281FB82900E5230D /* FeedTableViewCell.swift */; };
 		2B53651A282105A000E5230D /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B536519282105A000E5230D /* FeedViewController.swift */; };
 		2B53651D28210D0700E5230D /* FeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B53651C28210D0700E5230D /* FeedModel.swift */; };
+		2B5365252822558F00E5230D /* ic_home_like_before.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B5365212822558E00E5230D /* ic_home_like_before.png */; };
+		2B5365262822558F00E5230D /* icon_home_dislike_new.json in Resources */ = {isa = PBXBuildFile; fileRef = 2B5365222822558F00E5230D /* icon_home_dislike_new.json */; };
+		2B5365272822558F00E5230D /* ic_home_like_after.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B5365232822558F00E5230D /* ic_home_like_after.png */; };
+		2B5365282822558F00E5230D /* icon_home_like_new.json in Resources */ = {isa = PBXBuildFile; fileRef = 2B5365242822558F00E5230D /* icon_home_like_new.json */; };
+		2B53652A2822561D00E5230D /* FeedUserAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5365292822561D00E5230D /* FeedUserAvatarView.swift */; };
+		2B53652C2822564900E5230D /* FeedLikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B53652B2822564900E5230D /* FeedLikeButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +58,12 @@
 		2B536517281FB82900E5230D /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 		2B536519282105A000E5230D /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		2B53651C28210D0700E5230D /* FeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedModel.swift; sourceTree = "<group>"; };
+		2B5365212822558E00E5230D /* ic_home_like_before.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_home_like_before.png; sourceTree = "<group>"; };
+		2B5365222822558F00E5230D /* icon_home_dislike_new.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = icon_home_dislike_new.json; sourceTree = "<group>"; };
+		2B5365232822558F00E5230D /* ic_home_like_after.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_home_like_after.png; sourceTree = "<group>"; };
+		2B5365242822558F00E5230D /* icon_home_like_new.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = icon_home_like_new.json; sourceTree = "<group>"; };
+		2B5365292822561D00E5230D /* FeedUserAvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedUserAvatarView.swift; sourceTree = "<group>"; };
+		2B53652B2822564900E5230D /* FeedLikeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLikeButton.swift; sourceTree = "<group>"; };
 		DB89F3C896F8AD376007ED12 /* Pods_DouyinDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DouyinDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD55C052A050D9C436F0FC43 /* Pods-DouyinDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DouyinDemo.debug.xcconfig"; path = "Target Support Files/Pods-DouyinDemo/Pods-DouyinDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -246,6 +258,10 @@
 		2B53651F2821279400E5230D /* lottie */ = {
 			isa = PBXGroup;
 			children = (
+				2B5365232822558F00E5230D /* ic_home_like_after.png */,
+				2B5365212822558E00E5230D /* ic_home_like_before.png */,
+				2B5365222822558F00E5230D /* icon_home_dislike_new.json */,
+				2B5365242822558F00E5230D /* icon_home_like_new.json */,
 			);
 			path = lottie;
 			sourceTree = "<group>";
@@ -253,6 +269,8 @@
 		2B5365202822549800E5230D /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
+				2B5365292822561D00E5230D /* FeedUserAvatarView.swift */,
+				2B53652B2822564900E5230D /* FeedLikeButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -334,8 +352,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B5365272822558F00E5230D /* ic_home_like_after.png in Resources */,
+				2B5365262822558F00E5230D /* icon_home_dislike_new.json in Resources */,
 				2B5364E8281A5E5200E5230D /* LaunchScreen.storyboard in Resources */,
 				2B5364E5281A5E5200E5230D /* Assets.xcassets in Resources */,
+				2B5365252822558F00E5230D /* ic_home_like_before.png in Resources */,
+				2B5365282822558F00E5230D /* icon_home_like_new.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,7 +426,9 @@
 				2B53650A281AA11700E5230D /* FeedContainerCollectionViewCell.swift in Sources */,
 				2B536502281A6E1B00E5230D /* CameraRootViewController.swift in Sources */,
 				2B53650F281BA48000E5230D /* UIColor+Douyin.swift in Sources */,
+				2B53652A2822561D00E5230D /* FeedUserAvatarView.swift in Sources */,
 				2B536514281BB3A800E5230D /* FeedTabView.swift in Sources */,
+				2B53652C2822564900E5230D /* FeedLikeButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

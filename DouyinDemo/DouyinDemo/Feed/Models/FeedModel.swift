@@ -12,7 +12,7 @@ struct FeedModel {
     struct Author {
         var id: String?
         var name: String?
-        var avatarURL: URL?
+        var avatarURL: URL? = URL(string: "https://avatars.githubusercontent.com/u/57855015?v=4")
     }
     
     var id: String?
