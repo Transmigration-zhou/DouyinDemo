@@ -18,7 +18,7 @@ class FeedUserAvatarView: UIView {
     
     private lazy var followButton: UIButton = {
         let button = UIButton(type: .custom)
-        button.setImage(UIImage(systemName: "push.circle.fill"), for: .normal)
+        button.setImage(UIImage(systemName: "plus.circle.fill"), for: .normal)
         button.tintColor = UIColor.red
         button.addTarget(self, action: #selector(didClickButton), for: .touchUpInside)
         return button

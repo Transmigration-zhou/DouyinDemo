@@ -89,10 +89,10 @@ class FeedViewController: UIViewController {
         
         view.addSubview(rightButtonsStackView)
         
-        rightButtonsStackView.addSubview(avatarButton)
-        rightButtonsStackView.addSubview(likeButton)
-        rightButtonsStackView.addSubview(commentButton)
-        rightButtonsStackView.addSubview(shareButton)
+        rightButtonsStackView.addArrangedSubview(avatarButton)
+        rightButtonsStackView.addArrangedSubview(likeButton)
+        rightButtonsStackView.addArrangedSubview(commentButton)
+        rightButtonsStackView.addArrangedSubview(shareButton)
         
         rightButtonsStackView.snp.makeConstraints { make in
             make.width.equalTo(80)
