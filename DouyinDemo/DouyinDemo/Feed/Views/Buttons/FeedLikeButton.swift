@@ -60,6 +60,13 @@ class FeedLikeButton: UIView {
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTap(gesture:)))
         addGestureRecognizer(tapGesture)
+        
+        NotificationCenter.default.addObserver(forName: .init(rawValue: "didTapLikeNotification"), object: nil, queue: .main) { [weak self] _ in
+            guard self?.isLike != .some(true) else {
+                return
+            }
+            self?.updateLikeState(true)
+        }
     }
     
     required init?(coder: NSCoder) {
@@ -72,7 +79,11 @@ class FeedLikeButton: UIView {
     }
     
     @objc func didTap(gesture: UITapGestureRecognizer) {
-        isLike = !isLike
+        updateLikeState(!self.isLike)
+    }
+    
+    private func updateLikeState(_ isLike: Bool) {
+        self.isLike = isLike
         
         setAnimationViewsHiddenState(isLike: isLike)
         

@@ -7,6 +7,7 @@
 
 import UIKit
 import AVFoundation
+import Lottie
 
 class PlayerView: UIView {
     
@@ -68,6 +69,12 @@ class FeedViewController: UIViewController {
         return stackView
     }()
     
+    private lazy var pauseImageView: UIImageView = {
+        let imageView = UIImageView(image: UIImage(named: "icon_feed_white_pause72x72"))
+        imageView.contentMode = .scaleAspectFit
+        return imageView
+    }()
+    
     init(with feed: FeedModel) {
         self.feed = feed
         super.init(nibName: nil, bundle: nil)
@@ -100,6 +107,31 @@ class FeedViewController: UIViewController {
             make.trailing.equalTo(self.view.snp.trailing).offset(-10)
         }
         
+        view.addSubview(pauseImageView)
+        
+        pauseImageView.snp.makeConstraints { make in
+            make.center.equalTo(self.view.center)
+        }
+        
+        pauseImageView.isHidden = true
+        
+        // 1 点击屏幕 暂停播放、继续播放  双击 点赞
+        let singleTapGesture = UITapGestureRecognizer(target: self, action: #selector(handleSingleTap(gesture:)))
+        singleTapGesture.numberOfTapsRequired = 1
+        
+        let doubleTapGesture = UITapGestureRecognizer(target: self, action: #selector(handleDoubleTap(gesture:)))
+        doubleTapGesture.numberOfTapsRequired = 2
+        
+        singleTapGesture.require(toFail: doubleTapGesture)
+        
+        view.addGestureRecognizer(singleTapGesture)
+        view.addGestureRecognizer(doubleTapGesture)
+        
+        // 2 player loop
+        NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime, object: nil, queue: .main) { [weak self] _ in
+            self?.player?.seek(to: .zero)
+            self?.player?.play()
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -118,6 +150,37 @@ class FeedViewController: UIViewController {
     
     func pause() {
         player?.pause()
+    }
+    
+    @objc func handleSingleTap(gesture: UITapGestureRecognizer) {
+        guard let player = player else {
+            return
+        }
+
+        if player.rate > 0 {
+            pause()
+            pauseImageView.isHidden = false
+        } else {
+            play()
+            pauseImageView.isHidden = true
+        }
+    }
+    
+    @objc func handleDoubleTap(gesture: UITapGestureRecognizer) {
+        let animationView=AnimationView(name: "icon_home_like_new")
+        let location = gesture.location(in: view)
+        let size = CGSize(width: 80, height: 80)
+        let origin = CGPoint(x: location.x - size.width / 2, y: location.y - size.height / 2)
+        animationView.frame = CGRect(origin: origin, size: size)
+        
+        view.addSubview(animationView)
+        animationView.play(completion: nil)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(800)) {
+            animationView.removeFromSuperview()
+        }
+        
+        NotificationCenter.default.post(name: .init(rawValue: "didTapLikeNotification"), object: nil)
     }
     
 }
